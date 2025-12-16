@@ -208,7 +208,7 @@ uvicorn backend.main:app --reload
 
 - 启动前端，打开frontend/index.html
 
-![image-20251216171625866](.\img\img.png)
+![FCRAG/img/img.png at main · ssyb34947-maker/FCRAG](https://github.com/ssyb34947-maker/FCRAG/blob/main/img/img.png)
 
 ## 功能说明
 
