@@ -208,7 +208,7 @@ uvicorn backend.main:app --reload
 
 - 启动前端，打开frontend/index.html
 
-<img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20251216171625866.png" alt="image-20251216171625866" style="zoom:67%;" />
+![image-20251216171625866](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20251216171625866.png)
 
 ## 功能说明
 
