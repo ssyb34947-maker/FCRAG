@@ -1,0 +1,60 @@
+# Milvus Configuration
+milvus:
+  host: YOURHOST
+  port: YOURPORT
+  user: ""
+  password: ""
+  collection_name: "YOURCOLLECTIONNAME"
+  dim: 1024
+  index_params:
+    metric_type: "IP"
+    index_type: "IVF_FLAT"
+    params:
+      nlist: 128
+
+# Embedding Configuration
+embedding:
+  api_key: "YOUREMBEDDINGAPIKEY"
+  model_name: "qwen2.5-vl-embedding"
+  batch_size: 1
+  timeout: 30
+  max_retries: 3
+
+# Chunking Configuration
+chunking:
+  strategy: "sliding_token" # Options: sliding_token, sentence, paragraph, hybrid
+  chunk_size: 512
+  chunk_overlap: 64
+
+# Dedup Configuration
+dedup:
+  strategy: "simhash" # Options: md5, simhash, embedding
+  md5_threshold: 1.0
+  simhash_threshold: 3
+  embedding_threshold: 0.95
+
+# Retrieval Configuration
+retrieval:
+  top_k: 10
+  domain_filter: true
+
+# Reranker Configuration
+reranker:
+  mode: "embedding_bm25_mixed" # Options: cross_encoder, embedding_bm25_mixed
+  weights:
+    ann: 0.7
+    bm25: 0.3
+
+# LLM Configuration for knowledge integration
+llm:
+  api_key: "YOURAPIKEY"
+  base_url: "https://api.deepseek.com"  # 兼容OpenAI范式的API地址
+  model_name: "deepseek-chat"
+  timeout: 30
+  max_retries: 3
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "rag_system.log"
